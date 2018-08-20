@@ -17,4 +17,10 @@ public class Account
 
         return "You don't have enough money";
     }
+
+    public void Transfer(int amount, Account account)
+    {
+        balance -= amount;
+        account.Deposit(amount);
+    }
 }

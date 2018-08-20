@@ -41,4 +41,15 @@ public class AccountTest
         account.Deposit(10);
         Assertions.assertThat(account.Withdraw(20)).isEqualTo("You don't have enough money");
     }
+
+    @Test
+    public void UserCanTransferToAnotherAccount(){
+        {
+            Account anotherAccount = new Account();
+            account.Deposit(100);
+            account.Transfer(50, anotherAccount);
+            Assertions.assertThat(account.balance).isEqualTo(50);
+            Assertions.assertThat(anotherAccount.balance).isEqualTo(50);
+        }
+    }
 }
