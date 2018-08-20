@@ -9,8 +9,12 @@ public class Account
         balance += amount;
     }
 
-    public void Withdraw(int amount)
+    public String Withdraw(int amount)
     {
-        balance -= amount;
+        if (balance > amount) {
+            balance -= amount;
+        }
+
+        return "You don't have enough money";
     }
 }

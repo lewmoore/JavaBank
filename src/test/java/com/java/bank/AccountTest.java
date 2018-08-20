@@ -34,4 +34,11 @@ public class AccountTest
         account.Withdraw(25);
         Assertions.assertThat(account.balance).isEqualTo(25);
     }
+
+    @Test
+    public void UserCantWithdrawMoreThanBalance()
+    {
+        account.Deposit(10);
+        Assertions.assertThat(account.Withdraw(20)).isEqualTo("You don't have enough money");
+    }
 }
