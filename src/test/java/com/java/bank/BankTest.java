@@ -20,4 +20,10 @@ public class BankTest {
         Assertions.assertThat(bank.accountList).isEmpty();
     }
 
+    @Test
+    public void CreatesNewAccount()
+    {
+        bank.CreateAccount();
+        Assertions.assertThat(bank.accountList).hasSize(1);
+    }
 }

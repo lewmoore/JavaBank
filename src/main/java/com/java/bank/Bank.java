@@ -6,4 +6,9 @@ public class Bank {
 
     ArrayList<Object> accountList = new ArrayList<>();
 
+    public void CreateAccount()
+    {
+        accountList.add("Account1");
+    }
+
 }
