@@ -13,4 +13,11 @@ public class AccountTest
     {
         Assertions.assertThat(account).isInstanceOf(Account.class);
     }
+
+    @Test
+    public void UserCanDepositMoney()
+    {
+        account.Deposit(10);
+        Assertions.assertThat(account.balance).isEqualTo(10);
+    }
 }
