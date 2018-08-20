@@ -20,4 +20,10 @@ public class AccountTest
         account.Deposit(10);
         Assertions.assertThat(account.balance).isEqualTo(10);
     }
+
+    @Test
+    public void UserAccountHasInitialBalanceOfZero()
+    {
+        Assertions.assertThat(account.balance).isEqualTo(0);
+    }
 }
