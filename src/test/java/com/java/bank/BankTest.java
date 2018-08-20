@@ -25,5 +25,6 @@ public class BankTest {
     {
         bank.CreateAccount();
         Assertions.assertThat(bank.accountList).hasSize(1);
+        Assertions.assertThat(bank.accountList).contains("Account1");
     }
 }
