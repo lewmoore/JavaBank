@@ -26,4 +26,12 @@ public class AccountTest
     {
         Assertions.assertThat(account.balance).isEqualTo(0);
     }
+
+    @Test
+    public void UserCanWithdrawFromAccount()
+    {
+        account.Deposit(50);
+        account.Withdraw(25);
+        Assertions.assertThat(account.balance).isEqualTo(25);
+    }
 }
