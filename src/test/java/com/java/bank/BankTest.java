@@ -14,4 +14,10 @@ public class BankTest {
         Assertions.assertThat(bank).isInstanceOf(Bank.class);
     }
 
+    @Test
+    public void BankHasArrayOfAllAccounts()
+    {
+        Assertions.assertThat(bank.accountList).isEmpty();
+    }
+
 }
